@@ -7,7 +7,7 @@
 
 #import "SECSigner.h"
 #import "SECSignature.h"
-#import <secp256k1/secp256k1.h>
+#import "secp256k1.h"
 
 @interface SECSigner()
 

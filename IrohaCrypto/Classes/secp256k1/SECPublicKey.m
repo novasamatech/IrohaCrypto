@@ -6,7 +6,7 @@
 //
 
 #import "SECPublicKey.h"
-#import <secp256k1/secp256k1.h>
+#import "secp256k1.h"
 #import "IRCryptoKey.h"
 
 @interface SECPublicKey()

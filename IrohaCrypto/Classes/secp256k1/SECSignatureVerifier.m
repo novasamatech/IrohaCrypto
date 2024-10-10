@@ -8,7 +8,7 @@
 #import "SECSignatureVerifier.h"
 #import "SECPublicKey.h"
 #import "SECSignature.h"
-#import <secp256k1/secp256k1.h>
+#import "secp256k1.h"
 
 @implementation SECSignatureVerifier
 

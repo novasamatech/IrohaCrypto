@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IrohaCrypto'
-  s.version          = '0.9.0'
+  s.version          = '0.9.1'
   s.summary          = 'Provides object oriented wrappers for C/C++ crypto functions used by blockchains.'
 
   s.homepage         = 'https://github.com/soramitsu'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ERussel' => 'emkil.russel@gmail.com' }
-  s.source           = { :git => 'https://github.com/ERussel/IrohaCrypto.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/novasamatech/IrohaCrypto.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '11.0'
 
@@ -69,8 +69,9 @@ Pod::Spec.new do |s|
 
   s.subspec 'secp256k1' do |secp|
     secp.dependency 'IrohaCrypto/Common'
-    secp.dependency 'secp256k1.c', '~> 0.1'
-    secp.source_files = 'IrohaCrypto/Classes/secp256k1/**/*'
+    secp.source_files = 'IrohaCrypto/Classes/secp256k1/**/*', 'secp256k1/**/*'
+    secp.private_header_files = 'secp256k1/**/*.h'
+    secp.preserve_paths = 'secp256k1/**/*.h'
   end
 
   s.subspec 'ed25519' do |ed|

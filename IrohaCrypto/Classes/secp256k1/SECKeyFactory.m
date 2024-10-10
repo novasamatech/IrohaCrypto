@@ -6,7 +6,7 @@
 //
 
 #import "SECKeyFactory.h"
-#import <secp256k1/secp256k1.h>
+#import "secp256k1.h"
 #import "SECPrivateKey.h"
 #import "SECPublicKey.h"
 
