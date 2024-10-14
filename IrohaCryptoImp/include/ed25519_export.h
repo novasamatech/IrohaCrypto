@@ -22,7 +22,7 @@
 #endif
 
 #ifndef ED25519_DEPRECATED
-#  define ED25519_DEPRECATED 
+#  define ED25519_DEPRECATED __attribute__ ((__deprecated__))
 #endif
 
 #ifndef ED25519_DEPRECATED_EXPORT
@@ -33,6 +33,7 @@
 #  define ED25519_DEPRECATED_NO_EXPORT ED25519_NO_EXPORT ED25519_DEPRECATED
 #endif
 
+/* NOLINTNEXTLINE(readability-avoid-unconditional-preprocessor-if) */
 #if 0 /* DEFINE_NO_DEPRECATED */
 #  ifndef ED25519_NO_DEPRECATED
 #    define ED25519_NO_DEPRECATED
