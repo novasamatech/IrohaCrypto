@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IrohaCrypto'
-  s.version          = '0.9.0'
+  s.version          = '0.9.1'
   s.summary          = 'Provides object oriented wrappers for C/C++ crypto functions used by blockchains.'
 
   s.homepage         = 'https://github.com/soramitsu'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ERussel' => 'emkil.russel@gmail.com' }
-  s.source           = { :git => 'https://github.com/ERussel/IrohaCrypto.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/novasamatech/IrohaCrypto.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '11.0'
 
