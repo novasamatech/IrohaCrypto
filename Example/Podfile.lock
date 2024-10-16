@@ -54,7 +54,7 @@ CHECKOUT OPTIONS:
     :tag: 0.1.3
 
 SPEC CHECKSUMS:
-  IrohaCrypto: 5921efd6bd141454c7db386f165c959fab3d5365
+  IrohaCrypto: b53a7f16c839a1a76936402ffe35f496eaa8cbb0
   scrypt.c: b42ae06183251329d2b2c620c226fb541a4a3592
   secp256k1.c: 9df12a79da0a6735022c5d996d2df6a6e57e1d99
 
