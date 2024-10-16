@@ -1,55 +1,63 @@
 PODS:
-  - IrohaCrypto (0.8.2):
-    - IrohaCrypto/BIP39 (= 0.8.2)
-    - IrohaCrypto/blake2 (= 0.8.2)
-    - IrohaCrypto/Common (= 0.8.2)
-    - IrohaCrypto/ed25519 (= 0.8.2)
-    - IrohaCrypto/Iroha (= 0.8.2)
-    - IrohaCrypto/Scrypt (= 0.8.2)
-    - IrohaCrypto/secp256k1 (= 0.8.2)
-    - IrohaCrypto/sr25519 (= 0.8.2)
-    - IrohaCrypto/ss58 (= 0.8.2)
-  - IrohaCrypto/BIP39 (0.8.2):
+  - IrohaCrypto (0.9.0):
+    - IrohaCrypto/BIP39 (= 0.9.0)
+    - IrohaCrypto/blake2 (= 0.9.0)
+    - IrohaCrypto/Common (= 0.9.0)
+    - IrohaCrypto/ed25519 (= 0.9.0)
+    - IrohaCrypto/Iroha (= 0.9.0)
+    - IrohaCrypto/Scrypt (= 0.9.0)
+    - IrohaCrypto/secp256k1 (= 0.9.0)
+    - IrohaCrypto/sr25519 (= 0.9.0)
+    - IrohaCrypto/ss58 (= 0.9.0)
+  - IrohaCrypto/BIP39 (0.9.0):
     - IrohaCrypto/Common
-  - IrohaCrypto/blake2 (0.8.2)
-  - IrohaCrypto/Common (0.8.2)
-  - IrohaCrypto/ed25519 (0.8.2):
+  - IrohaCrypto/blake2 (0.9.0)
+  - IrohaCrypto/Common (0.9.0)
+  - IrohaCrypto/ed25519 (0.9.0):
     - IrohaCrypto/Common
-  - IrohaCrypto/Iroha (0.8.2):
+  - IrohaCrypto/Iroha (0.9.0):
     - IrohaCrypto/Common
-  - IrohaCrypto/Scrypt (0.8.2):
+  - IrohaCrypto/Scrypt (0.9.0):
     - IrohaCrypto/Common
     - scrypt.c (~> 0.1)
-  - IrohaCrypto/secp256k1 (0.8.2):
+  - IrohaCrypto/secp256k1 (0.9.0):
     - IrohaCrypto/Common
     - secp256k1.c (~> 0.1)
-  - IrohaCrypto/sr25519 (0.8.2):
+  - IrohaCrypto/sr25519 (0.9.0):
     - IrohaCrypto/BIP39
     - IrohaCrypto/blake2
     - IrohaCrypto/Common
-  - IrohaCrypto/ss58 (0.8.2):
+  - IrohaCrypto/ss58 (0.9.0):
     - IrohaCrypto/blake2
     - IrohaCrypto/Common
   - scrypt.c (0.1.1)
-  - secp256k1.c (0.1.2)
+  - secp256k1.c (0.1.3)
 
 DEPENDENCIES:
   - IrohaCrypto (from `../`)
+  - secp256k1.c (from `https://github.com/novasamatech/secp256k1.c`, tag `0.1.3`)
 
 SPEC REPOS:
   trunk:
     - scrypt.c
-    - secp256k1.c
 
 EXTERNAL SOURCES:
   IrohaCrypto:
     :path: "../"
+  secp256k1.c:
+    :git: https://github.com/novasamatech/secp256k1.c
+    :tag: 0.1.3
+
+CHECKOUT OPTIONS:
+  secp256k1.c:
+    :git: https://github.com/novasamatech/secp256k1.c
+    :tag: 0.1.3
 
 SPEC CHECKSUMS:
-  IrohaCrypto: 2b7585e71eff4fbd7e7adc2d592ad5c22610524b
+  IrohaCrypto: 6be75a4268cd1f5cec4231c6d3f95cb03f723fd3
   scrypt.c: b42ae06183251329d2b2c620c226fb541a4a3592
-  secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
+  secp256k1.c: 9df12a79da0a6735022c5d996d2df6a6e57e1d99
 
-PODFILE CHECKSUM: 090cdf3e5819729438de794e136ffaa6b24d3abc
+PODFILE CHECKSUM: f391d2b07fc19bc2c9026f747fb2b82ac803b008
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.15.2
