@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IrohaCrypto'
-  s.version          = '0.9.1'
+  s.version          = '0.10.0'
   s.summary          = 'Provides object oriented wrappers for C/C++ crypto functions used by blockchains.'
 
   s.homepage         = 'https://github.com/soramitsu'
@@ -51,11 +51,9 @@ Pod::Spec.new do |s|
     sr.dependency 'IrohaCrypto/blake2'
     sr.dependency 'IrohaCrypto/Common'
     sr.dependency 'IrohaCrypto/BIP39'
-    sr.source_files = 'IrohaCrypto/Classes/sr25519/**/*', 'sr25519Imp/**/*.h'
+    sr.dependency 'sr25519.c', '~> 0.1.0'
+    sr.source_files = 'IrohaCrypto/Classes/sr25519/**/*'
     sr.public_header_files = 'IrohaCrypto/Classes/sr25519/**/*.h'
-    sr.private_header_files = 'sr25519Imp/**/*.h'
-    sr.vendored_libraries = 'sr25519Imp/libsr25519crust.a'
-    sr.preserve_paths = 'sr25519Imp/**/*.h'
   end
 
   s.subspec 'blake2' do |b2|
@@ -89,8 +87,10 @@ Pod::Spec.new do |s|
     ss.source_files = 'IrohaCrypto/Classes/ss58/**/*'
     ss.public_header_files = 'IrohaCrypto/Classes/ss58/**/*.h'
   end
-
-  s.pod_target_xcconfig = { 'CLANG_WARN_DOCUMENTATION_COMMENTS' => "NO" }
+  
+  s.libraries = "sr25519c"
+  
+  s.pod_target_xcconfig = { 'CLANG_WARN_DOCUMENTATION_COMMENTS' => "NO", 'LIBRARY_SEARCH_PATHS' => "${PODS_XCFRAMEWORKS_BUILD_DIR}/sr25519.c" }
 
   s.test_spec do |ts|
       ts.source_files = 'Tests/**/*.{h,m}'

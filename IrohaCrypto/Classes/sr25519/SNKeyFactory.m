@@ -6,7 +6,7 @@
 //
 
 #import "SNKeyFactory.h"
-#import "sr25519.h"
+@import sr25519c;
 
 @implementation SNKeyFactory
 
@@ -25,7 +25,7 @@
     }
 
     uint8_t keypair[SR25519_KEYPAIR_SIZE];
-
+    
     sr25519_keypair_from_seed(keypair, seed.bytes);
 
     NSData *keypairData = [NSData dataWithBytes:keypair length:SR25519_KEYPAIR_SIZE];
